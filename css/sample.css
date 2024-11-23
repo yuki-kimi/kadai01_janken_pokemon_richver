@@ -1,0 +1,98 @@
+
+body{
+    width: 1380px;
+    height: 800px;
+    margin:0;
+    padding:0;
+    text-align:center;
+    font-size: 30px;
+    background-image: url(../img/pukemon_background.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: ;
+}
+
+.syobu_img img {
+    width: 55%;
+    height: auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+    margin:0;
+    padding:0;
+}
+
+
+.box1, .box4 {
+    flex: 0.6; /* 左右のボックスが同じ幅をとる */
+    display: flex;
+    justify-content: center; /* 中央揃え */
+    align-items: center; /* 中央揃え */
+}
+
+.center-boxes {
+    display: flex;
+    flex-direction: column; /* 上下に配置 */
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.box2, .box3, .box5 {
+    margin: 10px 0; /* 上下の間隔を空ける */
+    text-align: center; /* 中央揃え */
+}
+
+.result_img img {
+    width: 30%;
+    height: auto;
+}
+
+h1{
+    font-size: 20px;
+}
+
+.startButton{
+    font-size: 50px;
+}
+
+.table {
+    border: none;
+}
+
+@keyframes jump {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);/*上に移動*/
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.player-poke-win {
+    animation: jump 1s ease-out;
+}
+
+.player-poke-lose {
+    animation: tiltRight 1s ease-out;
+}
+
+@keyframes tiltRight {
+    0% {
+        transform: rotate(0deg); /* 初期状態は傾いていない */
+    }
+    100% {
+        transform: rotate(90deg); /* 最終的に90度回転 */
+    }
+}
+
+
